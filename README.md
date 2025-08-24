@@ -1,1 +1,2 @@
-SITE IS LIVE -wlc-update.vercel.app
+wlc-update.vercel.app
+
