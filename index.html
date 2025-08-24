@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediteck</title>
+    <link rel="stylesheet" href="Loginpage.css">
+    <script src="https://kit.fontawesome.com/3c67b07652.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href=https://static-00.iconduck.com/assets.00/stethoscope-icon-2046x2048-ini2wajb.png>
+</head>
+<body>
+   <div class="container">
+    <nav id="navbar">
+        <h1>Fauna : Online treatment .</h1>
+    </nav>
+    <section class="maindiv">
+        <div class="docImage">
+         <img src="https://thumbs.dreamstime.com/b/cat-doctor-medical-hat-doctor-cat-head-generative-ai-267842792.jpg" alt="An image of doctor">
+                 </div>
+        <div class="formForUser">
+            <form>
+                <input type="text" name="" id="userName" value="" placeholder="Enter your name..." spellcheck="false" class="inter" autocomplete="off" required>
+                <input type="number" name="" id="userContact" value="" placeholder="Enter your contact..." class="inter" required>
+                <input type="text" name="" id="cowName" class="cowName inter" value="" placeholder="Enter the Cow's name..." autocomplete="off" spellcheck="false" required>
+                <input type="number" name="" id="cowAge" class="cowBreed inter" value="" placeholder="Enter the Cow's age..." maxlength="3" required>
+                <input type="text" name="" id="cowBreed" class="cowBreed inter" value="" list="allBreed" placeholder="Enter the breed..." spellcheck="false" required>
+                <datalist id="allBreed">
+                    <option value="Tharparkar">Tharparkar</option>
+                    <option value="Sahiwal">Sahiwal</option>
+                    <option value="Red Sindhi">Red Sindhi</option>
+                    <option value="Ongole">Ongole</option>
+                    <option value="Kankrej">Kankrej</option>
+                    <option value="Malvi">Malvi</option>
+                    <option value="Kapila">Kapila</option>
+                    <option value="Gir">Gir</option>
+                </datalist>
+                <button id="formSubmit" >Submit</button>
+            </form>
+        </div>
+    </section>
+   
+   </div> 
+   <div class="cowImage">
+    <img src="https://pngfre.com/wp-content/uploads/cow-png-from-pngfre-17-300x269.png" alt="A cow image">
+   </div>
+
+        <section class="Queries nono">
+                <p class="under">Answer the below questions then we will determine what kind of dieseas your cow has... </p>
+            <div class="question1 questions">
+                <div class="firstQuestion">
+                    <div class="first questionbox">1. Diet and food intake of the animal / पशु का आहार सेवन ?
+                    </div>
+                    
+                     <div class="firstoption1 box">
+                        <label for="firstoption1">
+                            <input type="radio" name="samesame1" id="firstoption1" value="firstoption1">
+                            Eating full capacity but only selective food / पूरी क्षमता से लेकिन केवल चुनिंदा भोजन करना।
+                        </label>
+                     </div>
+                     <div class="firstoption2 box" >
+                        <label for="firstoption2">
+                        <input type="radio" name="samesame1" id="firstoption2" value="firstoption2">    
+                        Show less interest in food and less food intake / भोजन में कम रुचि दिखाएं और कम भोजन करें।
+                        </label>
+                     </div>
+                     <div class="firstoption3 box" >
+                        <label for="firstoption3">
+                        <input type="radio" name="samesame1" id="firstoption3" value="firstoption3">    normal - no change / सामान्य - कोई परिवर्तन नहीं
+                        </label>
+                     </div>
+                    </div>
+            </div>
+            <div class="question2 questions">
+                <div class="secondQuestion">
+                    <div class="second questionbox">2. Breadthing smell of animal / जानवर की दुर्गंध ?</div>
+                    
+                     <div class="secondoption1 box">
+                        <label for="secondoption1">
+                            <input type="radio" name="samesame2" id="secondoption1" value="secondoption1">
+                            sweet smell / सुवास।
+                        </label>
+                     </div>
+                     <div class="secondtoption2 box" >
+                        <label for="secondoption2">
+                        <input type="radio" name="samesame2" id="secondoption2" value="secondoption2">    
+                        normal - no change. / सामान्य - कोई परिवर्तन नहीं
+                        </label>
+                     </div>
+                    </div>
+            </div>
+            <div class="question3 questions">
+                <div class="thirdQuestion">
+                    <div class="second questionbox">3. Condition of udder / 
+                     थन की स्थिति ?</div>
+                    
+                     <div class="thirdoption1 box">
+                        <label for="thirdoption1">
+                            <input type="radio" name="samesame3" id="thirdoption1" value="thirdoption1">
+                            swelled and hard / फूला हुआ और सख्त.
+                        </label>
+                        <span class="suggestions"><a href="https://uploads.tapatalk-cdn.com/20190616/682700ef8380b9a99ed89b284e651a1c.jpg" target="_blank"><i class="fa-solid fa-circle-info"></i></a></span>
+                     </div>
+                     <div class="thirdoption2 box" >
+                        <label for="thirdoption2">
+                        <input type="radio" name="samesame3" id="thirdoption2" value="thirdoption2">    
+                        normal - no change. / सामान्य - कोई परिवर्तन नहीं
+                        </label>
+                     </div>
+                    </div>
+            </div>
+            <div class="question4 questions">
+                <div class="fourthQuestion">
+                    <div class="second questionbox">4. Body temprature of animal / जानवर के शरीर का तापमान ?                    </div>
+                    
+                     <div class="fourthoption1 box">
+                        <label for="fourthoption1">
+                            <input type="radio" name="samesame4" id="fourthoption1" value="fourthoption1">
+                             low temprature / हल्का तापमान।
+                        </label>
+                     </div>
+                     <div class="fourthoption2 box" >
+                        <label for="fourthoption2">
+                        <input type="radio" name="samesame4" id="fourthoption2" value="fourthoption2">    
+                        high temprature / उच्च तापमान.
+                        </label>
+                     </div>
+                     <div class="fourthoption3 box" >
+                        <label for="fourthoption3">
+                        <input type="radio" name="samesame4" id="fourthoption3" value="fourthoption3">    
+                        normal - no change. / सामान्य - कोई परिवर्तन नहीं
+                        </label>
+                     </div>
+                    </div>
+            </div>
+            <div class="question5 questions">
+                <div class="fifthQuestion">
+                    <div class="fifth questionbox">5. condition of dung / गोबर की स्थिति ? </div>
+                     <div class="fifthhoption1 box">
+                        <label for="fifthoption1">
+                            <input type="radio" name="samesame5" id="fifthoption1" value="fifthoption1">
+                            Watery or liquid form / पानीदार या तरल रूप।
+                        </label>
+                     </div>
+                     <div class="fifthoption2 box" >
+                        <label for="fifthoption2">
+                        <input type="radio" name="samesame5" id="fifthoption2" value="fifthoption2">    
+                        dry and hard / सूखा और कठोर
+                        </label>
+                     </div>
+                     <div class="fifthoption3 box" >
+                        <label for="fifthoption3">
+                        <input type="radio" name="samesame5" id="fifthoption3" value="fifthoption3">    
+                        normal - no change. / सामान्य - कोई परिवर्तन नहीं
+                        </label>
+                     </div>
+                    </div>
+            </div>
+            <div class="question6 questions">
+                <div class="sixthQuestion">
+                    <div class="sixth questionbox">6.  Condition of urine / मूत्र की स्थिति ?  </div>
+                     <div class="sixthoption1 box">
+                        <label for="sixthoption1">
+                            <input type="radio" name="samesame6" id="sixthoption1" value="sixthoption1">
+                            white colour puss ,bad smell / सफेद रंग का मवाद, बुरी गंध।
+                        </label>
+                        <span class="suggestions"><a href="https://cf-images.us-east-1.prod.boltdns.net/v1/static/3850378299001/dacf73dd-8694-47f6-b29f-dde5eb5063ea/66813a07-e3a8-43fb-a346-42b9be107e02/1280x720/match/image.jpg" target="_blank"><i class="fa-solid fa-circle-info"></i></a></span>
+                     </div>
+                     <div class="sixthoption2 box" >
+                        <label for="sixthoption2">
+                        <input type="radio" name="samesame6" id="sixthoption2" value="sixthoption2">    
+                        normal - no change. / सामान्य - कोई परिवर्तन नहीं
+                        </label>
+                     </div>
+                    </div>
+            </div>
+            <div class="question7 questions">
+                <div class="seventhQuestion">
+                    <div class="seventh questionbox">7. Condition of milk produced / उत्पादित दूध की स्थिति ?</div>
+                     <div class="seventhoption1 box">
+                        <label for="seventhoption1">
+                            <input type="radio" name="samesame7" id="seventhoption1" value="seventhoption1">
+                            saulty in taste or change in taste / स्वाद में तीखापन या स्वाद में बदलाव
+                           </label>
+                     </div>
+                     <div class="seventhoption2 box" >
+                        <label for="seventhoption2">
+                        <input type="radio" name="samesame7" id="seventhoption2" value="seventhoption2">    
+                        milk having blood / दूध में खून होना          
+                        </label>
+                        <span class="suggestions"><a href="https://i.ytimg.com/vi/uz4cyGSaDVQ/maxresdefault.jpg" target="_blank"><i class="fa-solid fa-circle-info"></i></a></span>
+                     </div>
+                     <div class="seventhoption3 box" >
+                        <label for="seventhoption3">
+                        <input type="radio" name="samesame7" id="seventhoption3" value="seventhoption3">    
+                        abnormal milk / असामान्य दूध (फटा हुआ)
+                        </label>
+                     </div>
+                     <div class="seventhoption4 box" >
+                        <label for="seventhoption4">
+                        <input type="radio" name="samesame7" id="seventhoption4" value="seventhoption4">    
+                        normal - no change. / सामान्य - कोई परिवर्तन नहीं
+                        </label>
+                     </div>
+                    </div>
+            </div>
+            <div class="question8 questions">
+                <div class="eighthQuestion">
+                    <div class="eighth questionbox">8. Physical condition of sitting / बैठने की अवस्था ? </div>
+                     <div class="eighthoption1 box">
+                        <label for="eighthoption1">
+                            <input type="radio" name="samesame8" id="eighthoption1" value="eighthoption1">
+                            lateral recumbance / पार्श्व लेटना.
+                            
+                        </label>
+                        <span class="suggestions"><a href="https://www.pharma.uzh.ch/static/sleepcd/demo/animals/chap8/is169.jpg" target="_blank"><i class="fa-solid fa-circle-info"></i></a></span>
+                     </div>
+                     <div class="eighthoption2 box" >
+                        <label for="eighthoption2">
+                        <input type="radio" name="samesame8" id="eighthoption2" value="eighthoption2">    
+                        normal - no change. / सामान्य - कोई परिवर्तन नहीं
+                        </label>
+                     </div>
+                    </div>
+            </div>
+            <button id="querySubmit">
+            SUBMIT
+            </button>
+        </section>
+        <div class="Report nono">
+            <header>
+                <h1> <u>MEDITECH : Medical Report </u></h1>
+                <p class="description">Date: [Date]</p>
+                <p class="user"></p>
+            </header>
+            <hr>
+            <section class="gap">
+                <h2><u>Patient Information</u></h2>
+                <div class="patient-info">
+                   <ul>
+                    <li><strong><p class="pname"></p></strong></li>
+                    <li><strong><p class="page"></p></strong></li>
+                    <li><strong><p class="pbreed"></p></strong></li>
+                    
+                   </ul>
+                </div>
+            </section>
+            <section class="gap">
+                <h2><u>Diseases</u></h2>
+                <div class="medical-history">
+                <strong><p class="descriptionofdiseas getpad"></p></strong> 
+                </div>
+            </section>
+            <section class="gap">
+                <h2><u>Injections</u></h2>
+                <div class="assessment">
+                 <strong>   <p class="descriptionofinjections getpad"></p> </strong>
+                </div>
+            </section>
+            <section class="gap">
+                <h2><u>Medicines</u></h2>
+                <div class="prescription">
+                <strong>    <p class="descriptionofmedicines getpad"></p> </strong>
+                </div>
+            </section>
+            <section class="getpad">
+                <button class="buybutton ">
+                    BUY MEDICINES
+                </button>
+                <button class="back">BACK</button>
+            </section>  
+              <br>
+            <br>
+        <!-- CONTACT INFORMATION -->
+        <div class="contact">
+            <h2>Contact us</h2>
+          </div>
+          <div class="contain">
+    <div class="contactInfo">
+        <div class="box">
+         <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+         <div class="text">
+          <h3>Phone</h3>
+          <p>7354999999</p>
+          </div>
+        </div>
+        <div class="box">
+         <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+         <div class="text">
+          <h3>Email</h3>
+          <p>DrAmitPatel45@gmail.com</p>
+         </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-sign" aria-hidden="true"></i></div>
+            <div class="text">
+             <h3>Signature</h3>
+            <img class="img" src="https://signature.freefire-name.com/img.php?f=2&t=Rohit%20Sharma" alt="">
+             </div>
+           </div>
+        </div>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>
+         
+         <footer>
+                <p>Generated by [Meditech : A free doctor at your home.]</p>
+            </footer>
+           
+        </div>
+        
+        </div>

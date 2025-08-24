@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+    ox-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(8, 16, 17);
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    font-family: "Nunito", sans-serif;
+}
+.container{
+  height: 100%;
+  width: 100%;
+}
+#navbar{
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+h1{ 
+   background-color: #4b4343;
+    font-size: 30px;
+    -webkit-animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+
+
+ 
+  
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.inter {
+    outline: none;
+    border: none;
+    padding: 13px 20px;
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 400px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+input:focus{
+    border: 2px solid black;
+}
+
+a{
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+#formSubmit{
+  border: none;
+  outline: none;
+  padding: 13px 30px;
+  margin-top: 60px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#formSubmit:hover{
+  background-color: rgb(185, 222, 252);
+}
+.maindiv{
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  margin-bottom: 120px;
+}
+.docImage{
+  height: 500px;
+  width: 200px;
+  margin-left: 80px;
+  padding-top: 80px;
+}
+.docImage img{
+  height: 80%;
+}
+.cowImage{
+  position: fixed;
+  right: 0px;
+  bottom: 300px;
+  width: 300px;
+  z-index: -2;
+}
+.suggestions{
+  margin-left: 50px;
+  cursor: pointer;
+}
+.Queries{
+    margin-top: 20px;
+    width: 100%;
+    flex-direction: column;
+}
+.nono{
+  display: none;
+}
+.under{
+  margin-top: 70px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.questions{
+    margin: 30px auto;
+    width: 70%;
+    padding: 10px 5px;
+}
+.questionbox{
+    width: 100%;
+    padding: 7px 5px;
+    background-color: #fff;
+    color: black;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-weight: 800;
+    background-color: rgb(236, 184, 116);
+    
+}
+.box{
+    font-family: monospace;
+    width: 100%;
+    padding: 7px 30px;
+    background-color: #fff;
+    color: black;
+    font-size: 1.2rem;
+    display: flex;
+    border: 2px solid black;
+    margin-top: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.box input{
+    margin-right: 10px;
+}
+.box:focus{
+    border: 2px solid green;
+}
+
+
+#querySubmit{
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  margin-top: 60px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 30px 590px;
+  color: #000;
+  font-size: 17px;
+  background-color:rgb(181,226,239) ;
+}
+#querySubmit:hover{
+  background-color: rgb(185, 222, 252);
+}
+.Report {
+  width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+header {
+  text-align: center;
+}
+.description{
+  margin-top: 10px;
+}
+
+h2 {
+  color: #555;
+}
+
+.patient-info ul li {
+  margin: 5px 40px;
+}
+.gap{
+  margin-top: 20px;
+}
+.getpad{
+  padding-left: 20px;
+}
+.buybutton{
+  border: 2px solid black;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.user{
+  margin-top: 10px;
+}
+footer {
+  margin-top: 16px;
+  text-align: center;
+  color: #888;
+}
+
+/* contact information */
+.contact{
+  text-align: center;
+  justify-content: center;
+  color:#888;
+  font-size: 25px;
+  font-style: italic;
+}
+  
+.contact.hover{
+  background-color: rgb(185, 222, 252);
+
+
+}
+.contain{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+}
+.contain .contactInfo{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contain .contactInfo .box{
+  position: relative;
+  padding: 20ox 0;
+  display: flex;
+
+}
+.contain .contactInfo .box .icon{
+ min-width: 60px;
+ height: 60px;
+ display: flex;
+ justify-content: center;
+ align-items: center;  
+ border-radius: 50%;
+font-size: 22px;
+}
+.contain .contactInfo .box .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  flex-direction: column;
+  font-weight: 300;
+}
+.contain .contactInfo .box .text h3{
+  font-weight: 500;
+  color: #00bcd4;
+}
+.back{
+  border: none;
+  outline: none;
+  padding: 13px 30px;
+  margin-top: 60px;
+  margin-left: 23px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.back:hover{
+  background-color: rgb(185, 222, 252);
+}
+.img{
+  position: relative;
+  margin-left: -10px;
+  size:0ch;
+  width: 200px;
+}
