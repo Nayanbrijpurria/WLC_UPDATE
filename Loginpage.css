@@ -1,74 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/* GLOBAL RESET AND BASE STYLES */
 *{
     margin: 0;
     padding: 0;
-    
-    ox-sizing: border-box;
+    box-sizing: border-box; /* IMPORTANT: Use standard box-sizing */
 }
+:root {
+    --primary-color: #007bff; /* Professional Blue */
+    --secondary-color: #28a745; /* Success Green */
+    --background-dark: #1e2833; /* Deep Dark Blue/Grey */
+    --text-light: #f8f9fa; /* Off-White */
+    --card-background: #ffffff;
+    --accent-orange: #ffc107;
+}
+
 body{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    background-color: rgb(8, 16, 17);
+    background-color: var(--background-dark);
     display: flex;
+    flex-direction: column;
     align-items: center;
     position: relative;
-    flex-direction: column;
     font-family: "Nunito", sans-serif;
+    color: var(--text-light); /* Set default text color */
 }
 .container{
-  height: 100%;
   width: 100%;
 }
+
+/* NAVIGATION BAR */
 #navbar{
     width: 100%;
-    background-color: black;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: #fff;
+    background-color: #121921; /* Slightly darker */
+    position: sticky;
+    top: 0;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 h1{ 
-   background-color: #4b4343;
-    font-size: 30px;
-    -webkit-animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    padding: 5px 15px;
+    border-radius: 8px;
+    /* Cleaned up the animation style for a modern effect */
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 @-webkit-keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
-  @keyframes text-focus-in {
-    0% {
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+@keyframes text-focus-in {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
   
-
-
- 
-  
+/* MAIN FORM SECTION */
+.maindiv{
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  align-items: flex-start; /* Aligned to the top */
+  justify-content: space-evenly;
+  margin: 120px auto 120px auto;
+}
+.formForUser {
+    padding: 40px;
+    background: #34404e; /* Slightly lighter dark background for contrast */
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    width: 450px;
+}
+.formForUser h2 {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
 form{
     display: flex;
     align-items: center;
@@ -82,252 +100,293 @@ input::-webkit-inner-spin-button {
 .inter {
     outline: none;
     border: none;
-    padding: 13px 20px;
-    margin-top: 30px;
-    border-radius: 20px;
-    width: 400px;
-    font-weight: 600;
-    font-size: 1.2rem;
+    padding: 15px 25px;
+    margin-top: 20px;
+    border-radius: 8px;
+    width: 100%; /* Use full width of container */
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 input:focus{
-    border: 2px solid black;
+    border: 2px solid var(--primary-color); /* Highlight on focus */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
-a{
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: #000;
-}
-
-#formSubmit{
+/* BUTTON STYLES */
+#formSubmit, #querySubmit, .back, #buyMedicineBtn{
   border: none;
   outline: none;
-  padding: 13px 30px;
-  margin-top: 60px;
-  border-radius: 20px;
+  padding: 12px 35px;
+  margin-top: 30px;
+  border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  color: var(--card-background);
+  background-color: var(--primary-color);
 }
-#formSubmit:hover{
-  background-color: rgb(185, 222, 252);
+#formSubmit:hover, #querySubmit:hover, .back:hover, #buyMedicineBtn:hover{
+  background-color: #0056b3; /* Darker blue */
+  transform: translateY(-2px);
 }
-.maindiv{
-  display: flex;
-  width: 80%;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 100px;
-  margin-bottom: 120px;
+#formSubmit {
+    width: 100%;
+    margin-top: 40px;
 }
+
 .docImage{
   height: 500px;
   width: 200px;
   margin-left: 80px;
   padding-top: 80px;
+  /* Keep docImage hidden for a cleaner look unless you add a professional icon */
+  display: none; 
 }
-.docImage img{
-  height: 80%;
-}
+
 .cowImage{
-  position: fixed;
+  position: absolute;
   right: 0px;
-  bottom: 300px;
-  width: 300px;
-  z-index: -2;
+  bottom: 0px;
+  width: 250px;
+  opacity: 0.2; /* Subtle background cow image */
+  z-index: 1;
 }
-.suggestions{
-  margin-left: 50px;
-  cursor: pointer;
-}
+
+/* SYMPTOMS/QUERIES SECTION */
 .Queries{
-    margin-top: 20px;
+    margin-top: 50px;
     width: 100%;
+    display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .nono{
   display: none;
 }
 .under{
-  margin-top: 70px;
+  margin-top: 20px;
   text-align: center;
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-decoration: underline;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  margin-bottom: 30px;
 }
 .questions{
-    margin: 30px auto;
-    width: 70%;
-    padding: 10px 5px;
+    margin: 15px 0;
+    width: 80%;
+    max-width: 900px;
+    padding: 15px;
+    background-color: #34404e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 .questionbox{
     width: 100%;
-    padding: 7px 5px;
-    background-color: #fff;
-    color: black;
-    font-size: 1.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 20px;
-    font-weight: 800;
-    background-color: rgb(236, 184, 116);
-    
+    padding: 12px 15px;
+    color: var(--background-dark);
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: var(--accent-orange); /* Highlighted question box */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .box{
-    font-family: monospace;
     width: 100%;
-    padding: 7px 30px;
-    background-color: #fff;
-    color: black;
-    font-size: 1.2rem;
-    display: flex;
-    border: 2px solid black;
+    padding: 10px 15px;
+    background-color: var(--card-background);
+    color: #333;
+    font-size: 1rem;
     margin-top: 5px;
-    border-radius: 20px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
 }
-.box input{
+.box:hover{
+    background-color: #f1f1f1;
+}
+.box label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.box input[type="radio"] {
     margin-right: 10px;
+    accent-color: var(--primary-color); /* Change radio button color */
+    transform: scale(1.2);
 }
-.box:focus{
-    border: 2px solid green;
+.box:has(input:checked) {
+    border-color: var(--secondary-color); /* Highlight selected option */
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.4);
+}
+
+.suggestions{
+  margin-left: auto;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+.suggestions a {
+    color: inherit;
+    font-size: 1.2rem;
 }
 
 
 #querySubmit{
-  border: none;
-  outline: none;
-  padding: 10px 30px;
-  margin-top: 60px;
-  border-radius: 20px;
-  font-weight: 700;
-  cursor: pointer;
-  margin: 30px 590px;
-  color: #000;
-  font-size: 17px;
-  background-color:rgb(181,226,239) ;
+    background-color: var(--secondary-color);
+    margin: 40px auto;
+    display: block;
 }
-#querySubmit:hover{
-  background-color: rgb(185, 222, 252);
+#querySubmit:hover {
+    background-color: #1e7e34;
 }
+
+/* MEDICAL REPORT SECTION */
 .Report {
-  width: 800px;
+  width: 90%;
+  max-width: 800px;
   margin: 60px auto;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 30px;
+  background-color: var(--card-background);
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  display: none; /* Controlled by JS */
 }
 
 header {
   text-align: center;
+  color: #1e2833;
 }
-.description{
+header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    -webkit-animation: none;
+    animation: none;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.description, .user {
   margin-top: 10px;
+  color: #555;
+  font-weight: 600;
 }
 
 h2 {
-  color: #555;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-top: 15px;
 }
 
+.patient-info ul {
+    list-style: none;
+}
 .patient-info ul li {
-  margin: 5px 40px;
+  margin: 8px 0;
+  color: #333;
 }
 .gap{
   margin-top: 20px;
 }
 .getpad{
   padding-left: 20px;
+  white-space: pre-wrap; /* Ensures line breaks in data are respected */
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
-.buybutton{
-  border: 2px solid black;
-  outline: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 20px;
+.getpad strong {
+    color: #000;
 }
-.user{
-  margin-top: 10px;
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
 }
-footer {
-  margin-top: 16px;
-  text-align: center;
-  color: #888;
+#buyMedicineBtn {
+    background-color: var(--secondary-color);
+    margin: 0;
+}
+.back{
+  background-color: #6c757d; /* Grey button for secondary action */
+  margin: 0;
+}
+.back:hover {
+    background-color: #5a6268;
 }
 
-/* contact information */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #6c757d; /* Muted color */
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+
+/* CONTACT INFORMATION */
 .contact{
   text-align: center;
-  justify-content: center;
-  color:#888;
-  font-size: 25px;
-  font-style: italic;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
   
-.contact.hover{
-  background-color: rgb(185, 222, 252);
-
-
-}
 .contain{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
 
 }
 .contain .contactInfo{
-  width: 50%;
+  width: 90%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Layout boxes horizontally */
+  justify-content: space-around;
+  padding: 15px 0;
 }
 .contain .contactInfo .box{
   position: relative;
-  padding: 20ox 0;
   display: flex;
-
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: none; /* Remove box border style inherited from questions */
+  background: transparent;
 }
 .contain .contactInfo .box .icon{
- min-width: 60px;
- height: 60px;
+ min-width: 50px;
+ height: 50px;
+ background: var(--primary-color);
+ color: var(--card-background);
  display: flex;
  justify-content: center;
  align-items: center;  
  border-radius: 50%;
-font-size: 22px;
+font-size: 1.2rem;
+margin-bottom: 5px;
 }
 .contain .contactInfo .box .text{
   display: flex;
-  margin-left: 20px;
-  font-size: 16px;
+  font-size: 14px;
   flex-direction: column;
-  font-weight: 300;
+  font-weight: 400;
+  margin-left: 0;
 }
 .contain .contactInfo .box .text h3{
-  font-weight: 500;
-  color: #00bcd4;
+  font-weight: 600;
+  color: #333;
 }
-.back{
-  border: none;
-  outline: none;
-  padding: 13px 30px;
-  margin-top: 60px;
-  margin-left: 23px;
-  border-radius: 20px;
-  font-weight: 700;
-  cursor: pointer;
+.contain .contactInfo .box .text p {
+    color: #6c757d;
 }
-.back:hover{
-  background-color: rgb(185, 222, 252);
-}
-.img{
-  position: relative;
-  margin-left: -10px;
-  size:0ch;
-  width: 200px;
-}
+/* Removed .img class for hardcoded signature - replaced with text */
