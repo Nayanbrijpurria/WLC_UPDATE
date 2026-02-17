@@ -20,7 +20,8 @@ document.querySelector("#formSubmit").addEventListener("click" , (e) => {
     "cowBreed" : cowBreed.value
 } 
 
-// ALSO save to the database
+
+// ALSO save to the database------------------------
 fetch("http://localhost:5000/api/users", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
@@ -33,7 +34,8 @@ fetch("http://localhost:5000/api/users", {
 .catch(err => {
   console.error("Failed to save to DB:", err);
 });
-//-----------------------------------------------
+//---------------------------------------------------
+
 document.querySelector(".description").textContent = new Date().toDateString();
 document.querySelector(".user").textContent = `USER :  ${userName.value} / ${userContact.value}`;
 document.querySelector(".pname").textContent = `NAME :- ${cowName.value}`;
@@ -136,9 +138,7 @@ document.querySelector("#querySubmit").addEventListener("click" , ()=>{
 })
 
 
-
 // page of mdecal reoprt;
-
 
 
 const getReport = () =>{
@@ -146,65 +146,96 @@ const getReport = () =>{
         document.querySelector(".descriptionofdiseas").innerText = "Negative Energy Balance (KETOSIS)";
         document.querySelector(".descriptionofinjections").innerText = `dextrose(25%) I/V 450ml \n betamethasone I/V 5ml \n Multivitamin I/V 10ml`;
         document.querySelector(".descriptionofmedicines").innerText = `milka boost/liquid anabolite \n 100ml I/V.(morning and evening for 5 days)`;
+
+        document.querySelector("#buyMedicineBtn").style.display = "inline-block";// buy medicen.
+
     }
     
     else if(answer1 == "firstoption3" && answer2 == "secondoption2" && answer3 == "thirdoption2" && answer4 == "fourthoption3" && answer5 == "fifthoption3" && answer6 == "sixthoption2" && answer7 == "seventhoption4" && answer8 == "eighthoption2"){
         document.querySelector(".descriptionofdiseas").innerText = "Negative Energy Balance (KETOSIS)";
         document.querySelector(".descriptionofinjections").innerText = `dextrose(25%) I/V 450ml \n betamethasone I/V 5ml \n Multivitamin I/V 10ml`;
         document.querySelector(".descriptionofmedicines").innerText = `milka boost/liquid anabolite \n 100ml I/V.(morning and evening for 5 days)`;
-    }
 
+                document.querySelector("#buyMedicineBtn").style.display = "inline-block";// buy medicen.
+
+    }
 
     else if(answer1 == "firstoption3" && answer2 == "secondoption1" && answer3 == "thirdoption2" && answer4 == "fourthoption3" && answer5 == "fifthoption3" && answer6 == "sixthoption2" && answer7 == "seventhoption4" && answer8 == "eighthoption2"){
         document.querySelector(".descriptionofdiseas").innerText = "Negative Energy Balance (KETOSIS)";
         document.querySelector(".descriptionofinjections").innerText = `dextrose(25%) I/V 450ml \n betamethasone I/V 5ml \n Multivitamin I/V 10ml`;
         document.querySelector(".descriptionofmedicines").innerText = `milka boost/liquid anabolite \n 100ml I/V.(morning and evening for 5 days)`;
+
+                document.querySelector("#buyMedicineBtn").style.display = "inline-block";// buy medicen.
+
     }
     
     else if(answer1 == "firstoption2" && answer2 == "secondoption2" && answer3 == "thirdoption2" && answer4 == "fourthoption3" && answer5 == "fifthoption1" && answer6 == "sixthoption2" && answer7 == "seventhoption4" && answer8 == "eighthoption2"){
         document.querySelector(".descriptionofdiseas").innerText = "Indigestion/Diaria."
         document.querySelector(".descriptionofinjections").innerText = `Ringor lactate 500ml I/V \n Multivitamin 10ml I/M   `
         document.querySelector(".descriptionofmedicines").innerText = `piobloom(powder) 25gm (morning and evening 5days  \n latifur ultra 20gm (once in a day for 5 days)`
+
+                document.querySelector("#buyMedicineBtn").style.display = "inline-block";// buy medicen.
+
     }
-    
     else if(answer1 == "firstoption2" && answer2 == "secondoption2" && answer3 == "thirdoption2" && answer4 == "fourthoption3" && answer5 == "fifthoption2" && answer6 == "sixthoption2" && answer7 == "seventhoption4" && answer8 == "eighthoption2"){
         document.querySelector(".descriptionofdiseas").innerText = "Indigestion/Constipation.";
         document.querySelector(".descriptionofinjections").innerText = `Ringor lactate 500ml I/V \n Multivitamin 10ml I/M \n     Tonophosfane 15ml I/M   `
         document.querySelector(".descriptionofmedicines").innerText = `parrafin 500ml(orally)`
+
+                document.querySelector("#buyMedicineBtn").style.display = "inline-block";// buy medicen.
+
     }
     else if(answer1 == "firstoption3" && answer2 == "secondoption2" && answer3 == "thirdoption2" && answer4 == "fourthoption3" && answer5 == "fifthoption3" && answer6 == "sixthoption1" && answer7 == "seventhoption4" && answer8 == "eighthoption2"){
         document.querySelector(".descriptionofdiseas").innerText = "Utrine Infection."
         document.querySelector(".descriptionofinjections").innerText = `X-ceft 1gm I/M (3 DAYS) \n     Pragma 2ml I/M        `
         document.querySelector(".descriptionofmedicines").innerText = `lixem(powder) 60ml(3 days)   \n   Utrovet 100ml (morning and evening 5 days) `
+
+                document.querySelector("#buyMedicineBtn").style.display = "inline-block";// buy medicen.
+
     }
 
     else if(answer1 == "firstoption2" && answer2 == "secondoption2" && answer3 == "thirdoption2" && answer4 == "fourthoption1" && answer5 == "fifthoption3" && answer6 == "sixthoption2" && answer7 == "seventhoption4" && answer8 == "eighthoption1"){
         document.querySelector(".descriptionofdiseas").innerText = "Milk fever"
         document.querySelector(".descriptionofinjections").innerText = `mifex 500ml I/V \n Multivitamin 10ml I/M \n  tnophosphane 15ml I/M  `
         document.querySelector(".descriptionofmedicines").innerText = `Ascal gel 300ml (3days) `
+
+                document.querySelector("#buyMedicineBtn").style.display = "inline-block";// buy medicen.
+
     }
 
     else if(answer1 == "firstoption3" && answer2 == "secondoption2" && answer3 == "thirdoption2" && answer4 == "fourthoption3" && answer5 == "fifthoption3" && answer6 == "sixthoption2" && answer7 == "seventhoption1" && answer8 == "eighthoption2"){
         document.querySelector(".descriptionofdiseas").innerText = "Subclinical Mastitis. "
         document.querySelector(".descriptionofinjections").innerText = `moxel 4.5gm I/M \n Isoflud 5ml `
         document.querySelector(".descriptionofmedicines").innerText = `mammadium(powder) 1pack(5 days) `
+
+                document.querySelector("#buyMedicineBtn").style.display = "inline-block";// buy medicen.
+
     }
     
     else if(answer1 == "firstoption3" && answer2 == "secondoption2" && answer3 == "thirdoption2" && answer4 == "fourthoption3" && answer5 == "fifthoption3" && answer6 == "sixthoption2" && answer7 == "seventhoption2" && answer8 == "eighthoption2"){
         document.querySelector(".descriptionofdiseas").innerText = "Acute Mastitis."
         document.querySelector(".descriptionofinjections").innerText = `intacef 4.5gm I/M \n  chrmostate 10ml I/M   `
-        document.querySelector(".descriptionofmedicines").innerText = `rubbing ice cubes        `
+        document.querySelector(".descriptionofmedicines").innerText = `rubbing ice cubes`
+
+                document.querySelector("#buyMedicineBtn").style.display = "inline-block";// buy medicen.
+
     }
     
     else if(answer1 == "firstoption3" && answer2 == "secondoption2" && answer3 == "thirdoption1" && answer4 == "fourthoption3" && answer5 == "fifthoption3" && answer6 == "sixthoption2" && answer7 == "seventhoption4" && answer8 == "eighthoption2"){
         document.querySelector(".descriptionofdiseas").innerText = "Peracute Mastitis."
         document.querySelector(".descriptionofinjections").innerText = `moxcl 4.5gm I/M (5days) \n  Isoflud 10ml I/M (3days)`
         document.querySelector(".descriptionofmedicines").innerText = `cobacton(intra mammary) (3 days) [tube] `
+
+                document.querySelector("#buyMedicineBtn").style.display = "inline-block";// buy medicen.
+
     }
     else{
         document.querySelector(".descriptionofdiseas").innerText = "Negative Energy Balance (KETOSIS)";
         document.querySelector(".descriptionofinjections").innerText = `dextrose(25%) I/V 450ml \n betamethasone I/V 5ml \n Multivitamin I/V 10ml`;
         document.querySelector(".descriptionofmedicines").innerText = `milka boost/liquid anabolite \n 100ml I/V.(morning and evening for 5 days)`;
+
+                document.querySelector("#buyMedicineBtn").style.display = "inline-block";// buy medicen.
+
     }   
     
 }
@@ -217,6 +248,7 @@ document.querySelector('.back').addEventListener('click',()=>{
 
 // Code for chat bot.
 // Chatbot toggle & input
+
 
 const chatbotBtn = document.createElement("button");
 chatbotBtn.innerText = "Chatbot";
@@ -237,8 +269,8 @@ chatbotWindow.style.bottom = "80px";
 chatbotWindow.style.right = "20px";
 chatbotWindow.style.width = "300px";
 chatbotWindow.style.height = "350px";
-chatbotWindow.style.background = "white";
-chatbotWindow.style.border = "1px solid #ccc";
+chatbotWindow.style.background = "black";
+chatbotWindow.style.border = "1px solid #140e0e";
 chatbotWindow.style.borderRadius = "10px";
 chatbotWindow.style.display = "none";
 chatbotWindow.style.flexDirection = "column";
@@ -293,5 +325,25 @@ inputBox.addEventListener("keypress", function (e) {
     inputBox.value = "";
   }
 });
+
+// --- Buy Medicine Button Logic ---
+document.addEventListener("DOMContentLoaded", () => {
+  const buyBtn = document.querySelector("#buyMedicineBtn");
+
+  if (buyBtn) {
+    buyBtn.addEventListener("click", () => {
+      const medName = document.querySelector(".descriptionofmedicines").innerText.trim();
+
+      if (medName) {
+        const encodedName = encodeURIComponent(medName.split('\n')[0]);
+        const searchUrl = `https://www.1mg.com/search/all?name=${encodedName}`; // Pharmacy website
+        window.open(searchUrl, "_blank"); // open new tab
+      } else {
+        alert("No medicine found in the report!");
+      }
+    });
+  }
+});
+
 
     
