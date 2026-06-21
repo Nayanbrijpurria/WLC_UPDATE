@@ -1,392 +1,347 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* GLOBAL RESET AND BASE STYLES */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* IMPORTANT: Use standard box-sizing */
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
-:root {
-    --primary-color: #007bff; /* Professional Blue */
-    --secondary-color: #28a745; /* Success Green */
-    --background-dark: #1e2833; /* Deep Dark Blue/Grey */
-    --text-light: #f8f9fa; /* Off-White */
-    --card-background: #ffffff;
-    --accent-orange: #ffc107;
+
+:root{
+--primary:#2E8B57;
+--secondary:#4CAF50;
+--dark:#0f172a;
+--white:#ffffff;
+--light:#f8fafc;
+--gray:#64748b;
 }
 
 body{
-    min-height: 100vh;
-    width: 100%;
-    background-color: var(--background-dark);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    font-family: "Nunito", sans-serif;
-    color: var(--text-light); /* Set default text color */
+font-family:'Poppins',sans-serif;
+min-height:100vh;
+background:
+linear-gradient(
+rgba(15,23,42,.45),
+rgba(15,23,42,.45)),
+url("https://images.unsplash.com/photo-1500595046743-cd271d694d30");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:white;
 }
+
 .container{
-  width: 100%;
+width:100%;
 }
 
-/* NAVIGATION BAR */
 #navbar{
-    width: 100%;
-    background-color: #121921; /* Slightly darker */
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+position:sticky;
+top:0;
+z-index:100;
+width:100%;
+padding:20px;
+text-align:center;
+background:rgba(0,0,0,.35);
+backdrop-filter:blur(10px);
 }
 
-h1{ 
-    color: var(--primary-color);
-    font-size: 1.8rem;
-    padding: 5px 15px;
-    border-radius: 8px;
-    /* Cleaned up the animation style for a modern effect */
-    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+#navbar h1{
+color:white;
+font-size:2rem;
+font-weight:700;
 }
 
-@-webkit-keyframes text-focus-in {
-    0% { opacity: 0; transform: scale(0.9); }
-    100% { opacity: 1; transform: scale(1); }
-}
-@keyframes text-focus-in {
-    0% { opacity: 0; transform: scale(0.9); }
-    100% { opacity: 1; transform: scale(1); }
-}
-  
-/* MAIN FORM SECTION */
 .maindiv{
-  display: flex;
-  width: 90%;
-  max-width: 1200px;
-  align-items: flex-start; /* Aligned to the top */
-  justify-content: space-evenly;
-  margin: 120px auto 120px auto;
+width:90%;
+max-width:1200px;
+margin:auto;
+min-height:85vh;
+display:flex;
+justify-content:center;
+align-items:center;
 }
-.formForUser {
-    padding: 40px;
-    background: #34404e; /* Slightly lighter dark background for contrast */
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    width: 450px;
+
+.formForUser{
+width:500px;
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 20px 60px rgba(0,0,0,.25);
 }
-.formForUser h2 {
-    text-align: center;
-    color: var(--text-light);
-    margin-bottom: 25px;
-    font-size: 1.8rem;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 10px;
+
+.formForUser h2{
+text-align:center;
+color:#111827;
+margin-bottom:30px;
 }
+
 form{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.inter {
-    outline: none;
-    border: none;
-    padding: 15px 25px;
-    margin-top: 20px;
-    border-radius: 8px;
-    width: 100%; /* Use full width of container */
-    font-weight: 500;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-input:focus{
-    border: 2px solid var(--primary-color); /* Highlight on focus */
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+display:flex;
+flex-direction:column;
 }
 
-/* BUTTON STYLES */
-#formSubmit, #querySubmit, .back, #buyMedicineBtn{
-  border: none;
-  outline: none;
-  padding: 12px 35px;
-  margin-top: 30px;
-  border-radius: 8px;
-  font-weight: 700;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.1s ease;
-  color: var(--card-background);
-  background-color: var(--primary-color);
-}
-#formSubmit:hover, #querySubmit:hover, .back:hover, #buyMedicineBtn:hover{
-  background-color: #0056b3; /* Darker blue */
-  transform: translateY(-2px);
-}
-#formSubmit {
-    width: 100%;
-    margin-top: 40px;
+.inter{
+width:100%;
+padding:16px;
+margin-top:15px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:15px;
+transition:.3s;
 }
 
-.docImage{
-  height: 500px;
-  width: 200px;
-  margin-left: 80px;
-  padding-top: 80px;
-  /* Keep docImage hidden for a cleaner look unless you add a professional icon */
-  display: none; 
+.inter:focus{
+outline:none;
+border-color:var(--primary);
+box-shadow:0 0 15px rgba(46,139,87,.2);
+}
+
+#formSubmit,
+#querySubmit,
+.back,
+#buyMedicineBtn{
+border:none;
+cursor:pointer;
+border-radius:12px;
+padding:15px 25px;
+font-weight:600;
+transition:.3s;
+}
+
+#formSubmit{
+margin-top:25px;
+background:var(--primary);
+color:white;
+}
+
+#formSubmit:hover{
+transform:translateY(-3px);
+}
+
+#querySubmit{
+background:var(--primary);
+color:white;
+margin:40px auto;
+display:block;
+}
+
+#querySubmit:hover{
+transform:translateY(-3px);
 }
 
 .cowImage{
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  width: 250px;
-  opacity: 0.2; /* Subtle background cow image */
-  z-index: 1;
+display:none;
 }
 
-/* SYMPTOMS/QUERIES SECTION */
 .Queries{
-    margin-top: 50px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+width:90%;
+max-width:1100px;
+margin:auto;
+padding-bottom:60px;
 }
-.nono{
-  display: none;
-}
+
 .under{
-  margin-top: 20px;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--accent-orange);
-  margin-bottom: 30px;
+text-align:center;
+font-size:1.4rem;
+margin-bottom:40px;
+font-weight:600;
 }
+
 .questions{
-    margin: 15px 0;
-    width: 80%;
-    max-width: 900px;
-    padding: 15px;
-    background-color: #34404e;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+background:white;
+color:#111827;
+border-radius:18px;
+margin-bottom:25px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
+
 .questionbox{
-    width: 100%;
-    padding: 12px 15px;
-    color: var(--background-dark);
-    font-size: 1.2rem;
-    font-weight: 700;
-    background-color: var(--accent-orange); /* Highlighted question box */
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+background:var(--primary);
+color:white;
+padding:18px;
+font-size:1.1rem;
+font-weight:600;
 }
+
 .box{
-    width: 100%;
-    padding: 10px 15px;
-    background-color: var(--card-background);
-    color: #333;
-    font-size: 1rem;
-    margin-top: 5px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.2s ease;
-}
-.box:hover{
-    background-color: #f1f1f1;
-}
-.box label {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-.box input[type="radio"] {
-    margin-right: 10px;
-    accent-color: var(--primary-color); /* Change radio button color */
-    transform: scale(1.2);
-}
-.box:has(input:checked) {
-    border-color: var(--secondary-color); /* Highlight selected option */
-    box-shadow: 0 0 10px rgba(40, 167, 69, 0.4);
+padding:18px;
+border-bottom:1px solid #eee;
+display:flex;
+align-items:center;
+justify-content:space-between;
+transition:.3s;
 }
 
-.suggestions{
-  margin-left: auto;
-  cursor: pointer;
-  color: var(--primary-color);
-}
-.suggestions a {
-    color: inherit;
-    font-size: 1.2rem;
+.box:hover
+
+.box label{
+width:100%;
+cursor:pointer;
 }
 
-
-#querySubmit{
-    background-color: var(--secondary-color);
-    margin: 40px auto;
-    display: block;
-}
-#querySubmit:hover {
-    background-color: #1e7e34;
+.box input[type="radio"]{
+margin-right:10px;
+transform:scale(1.2);
+accent-color:var(--primary);
 }
 
-/* MEDICAL REPORT SECTION */
-.Report {
-  width: 90%;
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 30px;
-  background-color: var(--card-background);
-  color: #333;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  display: none; /* Controlled by JS */
+.box:has(input:checked){
+background:#ecfdf5;
 }
 
-header {
-  text-align: center;
-  color: #1e2833;
-}
-header h1 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    -webkit-animation: none;
-    animation: none;
-    border-bottom: 3px solid var(--primary-color);
-    padding-bottom: 10px;
+.suggestions a{
+color:var(--primary);
+font-size:20px;
 }
 
-.description, .user {
-  margin-top: 10px;
-  color: #555;
-  font-weight: 600;
+.Report{
+width:90%;
+max-width:900px;
+margin:60px auto;
+background:white;
+color:#111827;
+border-radius:25px;
+padding:40px;
+box-shadow:0 20px 60px rgba(0,0,0,.2);
+border-top:8px solid var(--primary);
 }
 
-h2 {
-  color: var(--primary-color);
-  font-size: 1.3rem;
-  margin-top: 15px;
+header{
+text-align:center;
 }
 
-.patient-info ul {
-    list-style: none;
+header h1{
+color:var(--primary);
+margin-bottom:10px;
 }
-.patient-info ul li {
-  margin: 8px 0;
-  color: #333;
-}
+
 .gap{
-  margin-top: 20px;
+margin-top:30px;
 }
+
+.gap h2{
+color:var(--primary);
+margin-bottom:15px;
+}
+
+.patient-info ul{
+list-style:none;
+}
+
+.patient-info li{
+margin-bottom:10px;
+}
+
 .getpad{
-  padding-left: 20px;
-  white-space: pre-wrap; /* Ensures line breaks in data are respected */
-  line-height: 1.6;
-  font-size: 1.1rem;
+line-height:1.8;
 }
-.getpad strong {
-    color: #000;
+
+.buttons-container{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:15px;
+margin-top:30px;
 }
-.buttons-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
-}
-#buyMedicineBtn {
-    background-color: var(--secondary-color);
-    margin: 0;
-}
+
 .back{
-  background-color: #6c757d; /* Grey button for secondary action */
-  margin: 0;
-}
-.back:hover {
-    background-color: #5a6268;
+background:#64748b;
+color:white;
 }
 
-footer {
-  margin-top: 30px;
-  text-align: center;
-  color: #6c757d; /* Muted color */
-  padding: 15px;
-  border-top: 1px solid #ddd;
+#buyMedicineBtn{
+background:var(--secondary);
+color:white;
 }
 
-/* CONTACT INFORMATION */
 .contact{
-  text-align: center;
-  color: var(--primary-color);
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-top: 30px;
-  margin-bottom: 10px;
+text-align:center;
+margin-top:50px;
 }
-  
+
+.contact h2{
+color:var(--primary);
+}
+
 .contain{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+margin-top:30px;
+}
+
+.contactInfo{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.contactInfo .box{
+width:250px;
+background:#f8fafc;
+border-radius:20px;
+padding:25px;
+border:none;
+text-align:center;
+flex-direction:column;
+}
+
+.icon{
+width:60px;
+height:60px;
+background:var(--primary);
+color:white;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-bottom:15px;
+font-size:22px;
+}
+
+.text h3{
+color:#111827;
+margin-bottom:8px;
+}
+
+.text p{
+color:#64748b;
+}
+
+footer{
+text-align:center;
+padding:25px;
+margin-top:40px;
+background:rgba(0,0,0,.3);
+}
+
+.nono{
+display:none;
+}
+
+@media(max-width:768px){
+
+
+.maindiv{
+    width:95%;
+}
+
+.formForUser{
+    width:100%;
+}
+
+.buttons-container{
+    flex-direction:column;
+}
+
+.contactInfo{
+    flex-direction:column;
+    align-items:center;
+}
+
 
 }
-.contain .contactInfo{
-  width: 90%;
-  display: flex;
-  flex-direction: row; /* Layout boxes horizontally */
-  justify-content: space-around;
-  padding: 15px 0;
+
+#bloodBankBtn,
+button[onclick*="donor-net"]{
+    display:block;
+    margin:30px auto;
 }
-.contain .contactInfo .box{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  border: none; /* Remove box border style inherited from questions */
-  background: transparent;
-}
-.contain .contactInfo .box .icon{
- min-width: 50px;
- height: 50px;
- background: var(--primary-color);
- color: var(--card-background);
- display: flex;
- justify-content: center;
- align-items: center;  
- border-radius: 50%;
-font-size: 1.2rem;
-margin-bottom: 5px;
-}
-.contain .contactInfo .box .text{
-  display: flex;
-  font-size: 14px;
-  flex-direction: column;
-  font-weight: 400;
-  margin-left: 0;
-}
-.contain .contactInfo .box .text h3{
-  font-weight: 600;
-  color: #333;
-}
-.contain .contactInfo .box .text p {
-    color: #6c757d;
-}
-/* Removed .img class for hardcoded signature - replaced with text */
