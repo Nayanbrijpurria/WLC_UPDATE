@@ -250,80 +250,103 @@ document.querySelector('.back').addEventListener('click',()=>{
 // Chatbot toggle & input
 
 
+// const chatbotBtn = document.createElement("button");
+// chatbotBtn.innerText = "Chatbot";
+// chatbotBtn.style.position = "fixed";
+// chatbotBtn.style.bottom = "30px";
+// chatbotBtn.style.right = "20px";
+// chatbotBtn.style.padding = "10px 15px";
+// chatbotBtn.style.borderRadius = "70%";
+// chatbotBtn.style.background = "#28a745";
+// chatbotBtn.style.color = "white";
+// chatbotBtn.style.border = "none";
+// chatbotBtn.style.cursor = "pointer";
+// document.body.appendChild(chatbotBtn);
+
+// const chatbotWindow = document.createElement("div");
+// chatbotWindow.style.position = "fixed";
+// chatbotWindow.style.bottom = "80px";
+// chatbotWindow.style.right = "20px";
+// chatbotWindow.style.width = "300px";
+// chatbotWindow.style.height = "350px";
+// chatbotWindow.style.background = "black";
+// chatbotWindow.style.border = "1px solid #140e0e";
+// chatbotWindow.style.borderRadius = "10px";
+// chatbotWindow.style.display = "none";
+// chatbotWindow.style.flexDirection = "column";
+// chatbotWindow.style.overflow = "hidden";
+// chatbotWindow.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
+// document.body.appendChild(chatbotWindow);
+
+// chatbotBtn.addEventListener("click", () => {
+//   chatbotWindow.style.display = chatbotWindow.style.display === "none" ? "flex" : "none";
+// });
+
+// const chatBox = document.createElement("div");
+// chatBox.style.flex = "1";
+// chatBox.style.padding = "10px";
+// chatBox.style.overflowY = "auto";
+// chatBox.style.fontSize = "14px";
+// chatBox.style.fontFamily = "Arial, sans-serif";
+// chatbotWindow.appendChild(chatBox);
+
+// const inputBox = document.createElement("input");
+// inputBox.type = "text";
+// inputBox.placeholder = "Ask something...";
+// inputBox.style.padding = "10px";
+// inputBox.style.border = "none";
+// inputBox.style.borderTop = "1px solid #ccc";
+// inputBox.style.width = "100%";
+// chatbotWindow.appendChild(inputBox);
+
+// const respondTo = (input) => {
+//     const text = input.toLowerCase();
+
+//     if (text.includes("hello") || text.includes("hi")) return "Hello! How can I assist you with your cow's health today?";
+//     if (text.includes("ketosis")) return "Ketosis in cows is treated with dextrose, betamethasone, and multivitamins. Do you see symptoms like low appetite or sweet-smelling breath?";
+//     if (text.includes("mastitis")) return "Mastitis may cause swelling and reduced milk production. For subclinical cases, we recommend moxel and isoflud.";
+//     if (text.includes("diarrhea") || text.includes("indigestion")) return "For indigestion/diarrhea, piobloom and ringor lactate are common treatments.";
+//     if (text.includes("fever") || text.includes("milk fever")) return "Milk fever can be treated with mifex and multivitamins.";
+//     if (text.includes("thank")) return "You're welcome! 😊";
+//     if (text.includes("bye")) return "Goodbye! Stay healthy 🐄";
+
+//     return "I'm still learning. Please try asking about common cow diseases like mastitis, ketosis, etc.";
+// };
+
+// inputBox.addEventListener("keypress", function (e) {
+//   if (e.key === "Enter" && inputBox.value.trim() !== "") {
+//     const userInput = inputBox.value.trim();
+//     chatBox.innerHTML += `<div><b>You:</b> ${userInput}</div>`;
+//     const botReply = respondTo(userInput);
+//     setTimeout(() => {
+//       chatBox.innerHTML += `<div><b>Bot:</b> ${botReply}</div>`;
+//       chatBox.scrollTop = chatBox.scrollHeight;
+//     }, 500);
+//     inputBox.value = "";
+//   }
+// });
+
 const chatbotBtn = document.createElement("button");
-chatbotBtn.innerText = "Chatbot";
+
+chatbotBtn.innerText = "💬 Chat with AI";
 chatbotBtn.style.position = "fixed";
 chatbotBtn.style.bottom = "30px";
 chatbotBtn.style.right = "20px";
-chatbotBtn.style.padding = "10px 15px";
-chatbotBtn.style.borderRadius = "70%";
+chatbotBtn.style.padding = "12px 18px";
+chatbotBtn.style.borderRadius = "50px";
 chatbotBtn.style.background = "#28a745";
 chatbotBtn.style.color = "white";
 chatbotBtn.style.border = "none";
 chatbotBtn.style.cursor = "pointer";
+chatbotBtn.style.zIndex = "9999";
+
 document.body.appendChild(chatbotBtn);
 
-const chatbotWindow = document.createElement("div");
-chatbotWindow.style.position = "fixed";
-chatbotWindow.style.bottom = "80px";
-chatbotWindow.style.right = "20px";
-chatbotWindow.style.width = "300px";
-chatbotWindow.style.height = "350px";
-chatbotWindow.style.background = "black";
-chatbotWindow.style.border = "1px solid #140e0e";
-chatbotWindow.style.borderRadius = "10px";
-chatbotWindow.style.display = "none";
-chatbotWindow.style.flexDirection = "column";
-chatbotWindow.style.overflow = "hidden";
-chatbotWindow.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
-document.body.appendChild(chatbotWindow);
+// Replace with your deployed chatbot URL
+const CHATBOT_URL = "https://ai-based-veterinary-chatbot-offline.vercel.app/";
 
 chatbotBtn.addEventListener("click", () => {
-  chatbotWindow.style.display = chatbotWindow.style.display === "none" ? "flex" : "none";
-});
-
-const chatBox = document.createElement("div");
-chatBox.style.flex = "1";
-chatBox.style.padding = "10px";
-chatBox.style.overflowY = "auto";
-chatBox.style.fontSize = "14px";
-chatBox.style.fontFamily = "Arial, sans-serif";
-chatbotWindow.appendChild(chatBox);
-
-const inputBox = document.createElement("input");
-inputBox.type = "text";
-inputBox.placeholder = "Ask something...";
-inputBox.style.padding = "10px";
-inputBox.style.border = "none";
-inputBox.style.borderTop = "1px solid #ccc";
-inputBox.style.width = "100%";
-chatbotWindow.appendChild(inputBox);
-
-const respondTo = (input) => {
-    const text = input.toLowerCase();
-
-    if (text.includes("hello") || text.includes("hi")) return "Hello! How can I assist you with your cow's health today?";
-    if (text.includes("ketosis")) return "Ketosis in cows is treated with dextrose, betamethasone, and multivitamins. Do you see symptoms like low appetite or sweet-smelling breath?";
-    if (text.includes("mastitis")) return "Mastitis may cause swelling and reduced milk production. For subclinical cases, we recommend moxel and isoflud.";
-    if (text.includes("diarrhea") || text.includes("indigestion")) return "For indigestion/diarrhea, piobloom and ringor lactate are common treatments.";
-    if (text.includes("fever") || text.includes("milk fever")) return "Milk fever can be treated with mifex and multivitamins.";
-    if (text.includes("thank")) return "You're welcome! 😊";
-    if (text.includes("bye")) return "Goodbye! Stay healthy 🐄";
-
-    return "I'm still learning. Please try asking about common cow diseases like mastitis, ketosis, etc.";
-};
-
-inputBox.addEventListener("keypress", function (e) {
-  if (e.key === "Enter" && inputBox.value.trim() !== "") {
-    const userInput = inputBox.value.trim();
-    chatBox.innerHTML += `<div><b>You:</b> ${userInput}</div>`;
-    const botReply = respondTo(userInput);
-    setTimeout(() => {
-      chatBox.innerHTML += `<div><b>Bot:</b> ${botReply}</div>`;
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }, 500);
-    inputBox.value = "";
-  }
+    window.open(CHATBOT_URL, "_blank");
 });
 
 // --- Buy Medicine Button Logic ---
