@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Donor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Register as Donor</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="search.html">Search Donor</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="registerForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="text" id="blood_group" placeholder="Blood Group (e.g., A+)" required>
+      <input type="text" id="city" placeholder="City" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+
+      <button type="submit">Register</button> 
+    </form>
+
+    <p id="response"></p>
+  </main>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const donor = {
+    name: document.getElementById("name").value,
+    blood_group: document.getElementById("blood_group").value,
+    city: document.getElementById("city").value,
+    phone: document.getElementById("phone").value
+  };
+
+  const res = await fetch("http://localhost:3000/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(donor)
+  });
+
+  const data = await res.json();
+  document.getElementById("response").innerText = data.message;
+});
+</script>
+
+</body>
+</html>

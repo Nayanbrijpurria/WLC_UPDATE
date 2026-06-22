@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Donor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Search Donors</h1>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="register.html">Register</a>
+  </nav>
+</header>
+
+<main>
+  <input type="text" id="bloodGroup" placeholder="Enter Blood Group">
+  <button onclick="searchDonor()">Search</button>
+
+  <table border="1" id="resultTable">
+    <tr>
+      <th>Name</th>
+      <th>Blood Group</th>
+      <th>City</th>
+      <th>Phone</th>
+    </tr>
+  </table>
+</main>
+
+<script>
+async function searchDonor() {
+  const bg = document.getElementById("bloodGroup").value;
+
+  const res = await fetch(`http://localhost:3000/search/${bg}`);
+  const donors = await res.json();
+
+  const table = document.getElementById("resultTable");
+
+  table.innerHTML = `
+    <tr>
+      <th>Name</th>
+      <th>Blood Group</th>
+      <th>City</th>
+      <th>Phone</th>
+    </tr>
+  `;
+
+  donors.forEach(d => {
+    table.innerHTML += `
+      <tr>
+        <td>${d.name}</td>
+        <td>${d.blood_group}</td>
+        <td>${d.city}</td>
+        <td>${d.phone}</td>
+      </tr>
+    `;
+  });
+}
+</script>
+
+</body>
+</html>
